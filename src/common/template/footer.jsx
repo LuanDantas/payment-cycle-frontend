@@ -1,0 +1,12 @@
+// Default imports
+import React from 'react'
+
+// Componente funcional
+export default props => (
+    <footer className="main-footer">
+        <strong>
+            Copyright &copy; 2018
+            <a href="http://cod3r.com.br" target="_blank"> Cod3r</a>.
+        </strong>
+    </footer>
+)
