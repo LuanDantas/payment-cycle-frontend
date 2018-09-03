@@ -1,15 +1,16 @@
 // Default imports
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
+import promise from 'redux-promise'
 
 // Components imports
 import App from './main/app'
 import reducers from './main/reducers'
 
 // Definindo a store para o Redux
-const store = createStore( reducers )
+const store = applyMiddleware(promise)(createStore)(reducers)
 
 // Render
 ReactDOM.render(
