@@ -2,14 +2,14 @@
 import React, { Component } from 'react'
 
 // Componente baseado em classe
-export default class Grid extends Components {
+export default class Grid extends Component {
 
     /*
      * Método que receberá uma string com um conjusto de números separados por espaço
      * e ele irá transformar esses números nas classes css do bootstrap.
     */
     toCssClasses( numbers ) {
-        const cols = numbers ? numbers.slipt( ' ' ) : []
+        const cols = numbers ? numbers.split( ' ' ) : []
         let classes = ''
 
         if ( cols[0] ) {
