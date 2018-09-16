@@ -9,8 +9,11 @@ import promise from 'redux-promise'
 import App from './main/app'
 import reducers from './main/reducers'
 
+// Definindo configs para o uso do component do Redux no Chrome
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
 // Definindo a store para o Redux
-const store = applyMiddleware(promise)(createStore)(reducers)
+const store = applyMiddleware(promise)(createStore)(reducers, devTools)
 
 // Render
 ReactDOM.render(
